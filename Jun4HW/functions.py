@@ -90,5 +90,32 @@ class Functions(object):
         # To run, use the following
         # python3 Functions.py play_again_again
 
+    def smallest(self, numList):
+        nums = np.array(numList)
+        return np.min(nums)
+    
+    def largest(self, numList):
+        nums = np.array(numList)
+        return np.max(nums)
+    
+    def shortest(self, strList):
+        shrt = len(strList[0])
+        strValue = strList[0]
+        for i in strList:
+            if len(i) < shrt:
+                shrt = len(i)
+                strValue = i
+        return strValue
+
+    def longest(self, strList):
+        lngst = len(strList[0])
+        strValue = strList[0]
+        for i in strList:
+            if len(i) > lngst:
+                lngst = len(i)
+                strValue = i
+        return strValue
+
+
 if __name__ == "__main__":
     fire.Fire(Functions)
