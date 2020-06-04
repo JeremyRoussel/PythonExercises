@@ -42,7 +42,8 @@ if question == 6:
                 stars += "*"
             else:
                 stars += " "
-        print("".join(stars))
+        # print("".join(stars))
+        print(stars)
 
 if question == 7:
     height = 4
